@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      <div style="display:flex">
+        <img src="https://www.pinterest.com/pin/719731584185287809/" width="300px" height="300px" >
+        <div>
+        <h1 style="color:red">An An</h1>
+        <h2>Student ID 19521176</h2>
+        <p id="ChangeResult">Chua co doi ne</p>
+        <button id="btn" >Change Text</button>
+        <button onClick="myFunction()">Doi mau</button>
+        <script>
+            //Ex2 bai 1
+            const btn = document.getElementById("btn");
+
+            btn.addEventListener("click", ()=>{
+                document.getElementById("ChangeResult").innerHTML = "Doi roi ne";
+                
+            })
+
+            //Ex2 bai 2
+            function myFunction() {
+             document.body.style.backgroundColor = "pink";
+            }
+
+        </script>
+    </div>  
+    </div>
+        <hr>
+        <h3> Introduction</h2>
+        I am a student from UIT 
+        </hr>
+        <hr>
+        <h2> My hobbies</h2>
+        <ul>
+            <li>Travel</li>
+            <li>Cooking</li>
+            <li>Skincare</li>
+          </ul>
+
+        </hr>
+
+       
+</html>

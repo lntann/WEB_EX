@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click on the button to copy the text from the text field. Try to paste the text (e.g. ctrl+v) afterwards in a different window, to see the effect.</p>
+
+<input type="text" value="Hello World" id="myInput">
+<button onclick="myFunction()">Copy text</button>
+
+<script>
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+<script>
+  //Bai 1
+var today = new Date();
+var hour = today.getHours();
+var minute = today.getMinutes();
+var second = today.getSeconds();
+
+console.log(hour);
+var prepand = hour >= 12 ? " PM " : " AM ";
+hour = hour >= 12 ? hour - 12 : hour;
+if (hour === 0 && prepand === " PM ") {
+  if (minute === 0 && second === 0) {
+    hour = 12;
+    prepand = " Noon";
+  } else {
+    hour = 12;
+    prepand = " PM";
+  }
+}
+if (hour === 0 && prepand === " AM ") {
+  if (minute === 0 && second === 0) {
+    hour = 12;
+    prepand = " Midnight";
+  } else {
+    hour = 12;
+    prepand = " AM";
+  }
+}
+console.log(
+  "Current Time : " + hour + prepand + " : " + minute + " : " + second
+);
+
+
+</script>
+
+<script>
+  const parseCookie = (str) =>
+  str
+    .split(";")
+    .map((v) => v.split("="))
+    .reduce((acc, v) => {
+      acc[decodeURIComponent(v[0].trim())] = decodeURIComponent(v[1].trim());
+      return acc;
+    }, {});
+console.log(parseCookie("foo=bar; equation=E%3Dmc%5E2"));
+
+</script>
+
+<script
+const isValidJSON = (obj) => {
+  try {
+    JSON.parse(obj);
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+console.log(isValidJSON('{"name":"An","age":21}'));
+console.log(isValidJSON('{"name":"Thinh",age:"26"}'));
+console.log(isValidJSON(null));
+</script>
+
+<script>
+  const fs = require("fs");
+
+// create a JSON object
+const user = {
+  id: 19521176,
+  name: "An An",
+  age: 21,
+};
+
+// convert JSON object to a string
+const data = JSON.stringify(user);
+
+// write JSON string to a file
+fs.writeFile("user.json", data, (err) => {
+  if (err) {
+    throw err;
+  }
+  console.log("JSON data is saved.");
+});
+
+</script>
+
+</body>
+
+</body>
+</html>
